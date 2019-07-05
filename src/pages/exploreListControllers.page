@@ -1,0 +1,43 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+
+    <apex:form >
+        <apex:pageBlock title="Account List" id="accounts_list">
+        
+            Filter:
+            
+            <apex:selectList value="{! filterId }" size="1">
+                <apex:selectOptions value="{! listViewOptions }" />
+                 <apex:actionSupport event="onchange" reRender="accounts_list"/> 
+            </apex:selectList>
+        
+            <apex:pageBlockTable value="{! accounts }" var="account">
+                <apex:column value="{! account.Name }"/>
+                <apex:column value="{! account.Rating }"/>
+                <apex:column value="{! account.Industry }"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <table style="width: 100%">
+        
+        <tr>
+            <td>
+                <apex:outputText value="{! PageNumber } of {! CEILING(ResultSize/pageSize) }" />
+            </td>
+            <td align="center">
+                <apex:commandLink action="{! previous }" value="Previous"/>
+                <apex:commandLink action="{! next }" value="Next"/>
+            </td>
+            <td align="right">
+                <apex:selectList value="{! PageSize }" size="1" >
+                    <apex:selectOption itemValue="5" itemLabel="5" /> 
+                    <apex:selectOption itemValue="20" itemLabel="20" /> 
+                    
+                    <apex:actionSupport event="onchange" reRender="accounts_list" />
+                </apex:selectList>
+            </td>
+        </tr>
+        </table>
+        
+    </apex:form>
+ 
+</apex:page>

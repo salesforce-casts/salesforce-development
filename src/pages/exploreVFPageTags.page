@@ -1,0 +1,13 @@
+<apex:page controller="exploreVFPageTagsController">
+    <apex:form >
+        <apex:inputText value="{! name }" id="name"/>
+        <apex:inputTextarea value="{! description }" id="description" />
+        <apex:inputHidden value="{! accessKey }" id="accessKey" /> 
+        <apex:inputSecret value="{! passKey }" id="passkey" />
+        <apex:inputCheckbox value="{! travelRequired }" id="travelRequired" />
+        
+    	<apex:commandButton value="save" action="{! save }" />
+        <apex:commandLink value="cancel" action="{! cancel }" />
+    </apex:form>
+    
+</apex:page>

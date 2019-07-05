@@ -1,0 +1,11 @@
+<apex:page standardController="Account" extensions="MyFirstController">
+
+<apex:pageBlock >
+    <apex:pageBlockTable value="{!accounts}" var="account">
+        <apex:column value="{! account.Id }"/>
+        <apex:column value="{! account.Name }"/>
+        <apex:column value="{! account.Rating }"/>
+        <apex:column value="{! account.AccountNumber }"/>
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page >
+   
+  <script>
+      const vehicle = {
+          type: 'car',
+          colour: 'red',
+          wheels: 4
+      }               
+  </script>
+ 
+</apex:page>

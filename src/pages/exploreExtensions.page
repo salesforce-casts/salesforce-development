@@ -1,0 +1,8 @@
+<apex:page standardController="Account" extensions="exploreExtensions">  
+
+  <!-- https://ap4.salesforce.com/apex/exploreExtensions?id=0016F0000319KQL -->
+  
+  <!-- {! Account.Name } -->
+  {! Account.Name }
+  {! Account.Rating }
+</apex:page>

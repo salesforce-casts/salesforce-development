@@ -1,0 +1,17 @@
+{
+    "projectName": "iam_teja_dev",
+    "username": "iam_teja_dev@salesforcecasts.com",
+    "id": "af54d5b0-9ee6-11e9-bd8f-432856814779",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://ap4.salesforce.com",
+    "workspace": "/Users/KrishnaTeja/Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

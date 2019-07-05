@@ -1,0 +1,20 @@
+<apex:page controller="exploreInnerSOQL">
+    <apex:dataTable value="{! accounts }" var="account" >
+    
+        <apex:column >
+            {! account.Name }
+        </apex:column>
+        <apex:column >
+            <apex:dataList value="{! account.contacts }" var="account_contact" >
+                <apex:outputText value="{! account_contact.Id }" /> 
+                <apex:outputText value="{! account_contact.Name }" />
+                <apex:outputText value="{! account_contact.Email }" />
+            </apex:dataList>
+        </apex:column>
+        <apex:column >
+            <apex:dataList value="{! account.cases }" var="account_case" >
+                <apex:outputText value="{! account_case.Id }" />                
+            </apex:dataList>
+        </apex:column>    
+    </apex:dataTable>
+</apex:page>

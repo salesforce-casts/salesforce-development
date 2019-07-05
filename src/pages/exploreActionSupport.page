@@ -1,0 +1,12 @@
+<apex:page controller="exploreActionSupportController">
+
+    <apex:form >
+        <apex:outputPanel id="out">
+            <apex:outputText value="Click Me {! count }" />
+            <apex:actionSupport event="onclick" action="{! counterHelper }" reRender="out" status="counterStatus"/>
+        </apex:outputPanel>
+        
+        <apex:actionStatus id="counterStatus" startText="Processing..." stopText="Finished" />
+    </apex:form>
+    
+</apex:page>

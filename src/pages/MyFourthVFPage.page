@@ -1,0 +1,18 @@
+<apex:page sidebar="false" showHeader="false" controller="MyFourthController">
+    
+    <!-- Attributes define the characteristic of a tag -->
+    
+    Hello World {! name }
+    <apex:form >
+        <apex:inputText value="{! name }" id="name" />
+        <apex:commandButton value="Save" action="{!nameOfTheMethod}"/>
+    </apex:form>
+    
+    
+    <!-- We can use all HTML tags with in <apex:page /> -->
+    
+    <div style="border: 2px solid green">
+        This is a Div Tag
+    </div>
+    
+</apex:page>

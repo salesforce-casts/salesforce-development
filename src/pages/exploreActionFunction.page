@@ -1,0 +1,17 @@
+<apex:page controller="exploreActionFunctionController">
+
+    <script>
+        window.onload = function(){
+            callApexMethod('Hello Salesforce Casts');
+        }
+    </script>
+    <apex:outputText id="out" value="{! greeting }"/>
+    
+    <apex:form >
+        <apex:actionFunction action="{! methodOne }" name="callApexMethod" rerender="out">
+            <apex:param name="message" value="" assignTo="{! greeting }"/>
+        </apex:actionFunction>
+    
+    </apex:form>
+    
+</apex:page>

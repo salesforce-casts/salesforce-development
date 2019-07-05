@@ -1,0 +1,61 @@
+<apex:page controller="ExploreAccountRemotingController">
+    
+    <script>
+    	function getRemoteAccount(){
+        	var accountName = document.getElementById('acctSearch').value;
+            
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ExploreAccountRemotingController.getAccount}',
+                 accountName,
+                 function(result, event){
+                 	 console.log(result);
+                     console.log(event);
+                     
+                     if(event.status){
+                     	document.getElementById('name').innerHTML = result.Name
+                        document.getElementById('industry').innerHTML = result.Industry
+                     }else if(event.type === 'exception'){
+                         document.getElementById('errors').innerHTML = event.message;
+                     }else{
+                     	document.getElementById('errors').innerHTML = 'Something went wrong!';
+                     }
+                 },
+                {escape: true}
+            
+            );
+        }
+    </script>
+    
+    <input id="acctSearch" type="text" />
+    <button onclick="getRemoteAccount()">
+        Get Account Records
+    </button>
+    
+    <div id="errors"></div>
+    
+    
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+        	<apex:pageBlockSectionItem >
+                <span id="name"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <span id="industry"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</apex:page>

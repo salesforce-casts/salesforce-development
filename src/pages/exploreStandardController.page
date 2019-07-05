@@ -1,0 +1,13 @@
+<apex:page standardController="Account" >
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+            <apex:outputText > {! Account.Name } </apex:outputText>
+            
+            <apex:outputField value="{! Account.Rating }" />
+            
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:outputLink value="{! Account.website }" target="_blank">Click Here</apex:outputLink>
+</apex:page>

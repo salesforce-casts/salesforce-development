@@ -1,0 +1,6 @@
+<apex:page controller="apexDatatableStructures">
+   	<apex:dataList value="{! acc }" var="a" >
+        	<apex:outputText >{! a.Name }</apex:outputText>
+        	<apex:outputText >{! a.Rating }</apex:outputText>
+    </apex:dataList>
+</apex:page>

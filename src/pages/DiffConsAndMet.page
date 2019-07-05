@@ -1,0 +1,6 @@
+<apex:page controller="DifferenceConsAndMethod" action="{! save }">
+    
+    <apex:form >
+    	<!--<apex:commandButton action="{! save }" value="save" id="save" /> -->
+    </apex:form>
+</apex:page>

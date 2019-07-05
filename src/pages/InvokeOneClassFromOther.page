@@ -1,0 +1,5 @@
+<apex:page controller="InvokeOneClassFromOther">
+    <apex:form >
+    	<apex:commandButton action="{!save}" value="save" id="save" />
+    </apex:form>
+</apex:page>
